@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login or Sign Up | Luxury House</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="logo">Luxury House</a>
+      <button class="menu-button" onclick="toggleMenu()">Menu</button>
+      <nav>
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wood.html">Wood Info</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="dealers.html">Dealers</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">My Account</h2>
+    <p class="page-text">This is a practice form. Your data is only saved in your own browser.</p>
+
+    <div class="form-box">
+      <div class="tabs">
+        <button id="tab-login" class="active" onclick="showLoginForm()">Login</button>
+        <button id="tab-signup" onclick="showSignupForm()">Sign Up</button>
+      </div>
+
+      <form id="login-form" onsubmit="doLogin(event)">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" placeholder="you@email.com" />
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="Your password" />
+
+        <p style="margin-top:18px">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn" onclick="doLogout()">Logout</button>
+        </p>
+      </form>
+
+      <form id="signup-form" class="hidden" onsubmit="doSignup(event)">
+        <label for="signup-name">Full Name</label>
+        <input type="text" id="signup-name" placeholder="Ali Khan" />
+
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="you@email.com" />
+
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="At least 6 characters" />
+
+        <label for="signup-password2">Confirm Password</label>
+        <input type="password" id="signup-password2" placeholder="Write password again" />
+
+        <p style="margin-top:18px"><button type="submit" class="btn">Create Account</button></p>
+      </form>
+
+      <div id="auth-message"></div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Luxury House. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

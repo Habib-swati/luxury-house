@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place an Order | Luxury House</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="logo">Luxury House</a>
+      <button class="menu-button" onclick="toggleMenu()">Menu</button>
+      <nav>
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wood.html">Wood Info</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="dealers.html">Dealers</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Order Form</h2>
+    <p class="page-text">Fill the form and we will call you to confirm.</p>
+
+    <div class="form-box wide">
+      <form id="order-form" onsubmit="placeOrder(event)">
+        <label for="order-name">Your Name</label>
+        <input type="text" id="order-name" placeholder="Ali Khan" />
+
+        <label for="order-phone">Phone Number</label>
+        <input type="tel" id="order-phone" placeholder="03001234567" />
+
+        <label for="order-address">Delivery Address</label>
+        <textarea id="order-address" rows="3" placeholder="House no, street, city"></textarea>
+
+        <label for="order-product">Product</label>
+        <select id="order-product" onchange="updateTotal()">
+          <option>Walnut Carved Door</option>
+          <option>Oak Timber Window</option>
+          <option>Teak Dining Table</option>
+          <option>Sheesham Wood Plank (per sq ft)</option>
+        </select>
+
+        <label for="order-qty">Quantity</label>
+        <input type="number" id="order-qty" value="1" min="1" onchange="updateTotal()" onkeyup="updateTotal()" />
+
+        <p class="price" id="order-total">Total: Rs 0</p>
+
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+
+      <div id="order-message"></div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Luxury House. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+  <script>fillOrderProduct();</script>
+</body>
+</html>

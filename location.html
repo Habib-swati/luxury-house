@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Location | Luxury House</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="logo">Luxury House</a>
+      <button class="menu-button" onclick="toggleMenu()">Menu</button>
+      <nav>
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wood.html">Wood Info</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="dealers.html">Dealers</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Our Shop</h2>
+    <p class="page-text">Khan Timber Mart, shero jhangi peshawar. Open 9 AM - 12 AM.</p>
+
+
+    <h2 class="page-title" style="margin-top:40px">Your Location</h2>
+    <p class="page-text">Press the button so we can calculate your delivery.</p>
+
+    <div class="form-box">
+      <p style="text-align:center"><button class="btn" onclick="findMyLocation()">Find My Location</button></p>
+      <div id="location-message"></div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Luxury House. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

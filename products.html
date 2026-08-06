@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products & Prices | Luxury House</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="logo">Luxury House</a>
+      <button class="menu-button" onclick="toggleMenu()">Menu</button>
+      <nav>
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wood.html">Wood Info</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="dealers.html">Dealers</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Our Products</h2>
+    <p class="page-text">Click a button to filter, then press Order Now.</p>
+
+    <p style="text-align:center; margin-bottom:22px">
+      <button class="btn" onclick="filterProducts('all')">All</button>
+      <button class="btn" onclick="filterProducts('door')">Doors</button>
+      <button class="btn" onclick="filterProducts('window')">Windows</button>
+      <button class="btn" onclick="filterProducts('table')">Tables</button>
+      <button class="btn" onclick="filterProducts('timber')">Timber</button>
+    </p>
+
+    <div class="grid">
+      <div class="card" data-type="door">
+        <img src="img/door.jpg" alt="Walnut carved wooden door" />
+        <div class="card-body">
+          <h3>Walnut Carved Door</h3>
+          <p>Solid walnut double door with hand carving.</p>
+          <p class="price">Rs 45,000</p>
+          <button class="btn" onclick="orderProduct('Walnut Carved Door', 45000)">Order Now</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="window">
+        <img src="img/window.jpg" alt="Oak timber window frame" />
+        <div class="card-body">
+          <h3>Oak Timber Window</h3>
+          <p>Classic oak window frame with glass panels.</p>
+          <p class="price">Rs 18,000</p>
+          <button class="btn" onclick="orderProduct('Oak Timber Window', 18000)">Order Now</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="table">
+        <img src="img/table.jpg" alt="Teak dining table with chairs" />
+        <div class="card-body">
+          <h3>Teak Dining Table</h3>
+          <p>Six seater teak dining table with chairs.</p>
+          <p class="price">Rs 65,000</p>
+          <button class="btn" onclick="orderProduct('Teak Dining Table', 65000)">Order Now</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="timber">
+        <img src="img/timber.jpg" alt="Stack of timber planks" />
+        <div class="card-body">
+          <h3>Sheesham Wood Plank</h3>
+          <p>Seasoned sheesham planks, cut to your size.</p>
+          <p class="price">Rs 900 / sq ft</p>
+          <button class="btn" onclick="orderProduct('Sheesham Wood Plank (per sq ft)', 900)">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Luxury House. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

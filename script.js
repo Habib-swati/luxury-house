@@ -123,7 +123,7 @@ function updateTotal() {
   var totalBox = document.getElementById("order-total");
   if (!select || !qtyInput || !totalBox) { return; }
 
-  var price = PRICES[select.value] || 0;
+  var price = PRICES[select.value] || 0; 
   var qty = parseInt(qtyInput.value, 10);
   if (isNaN(qty) || qty < 1) { qty = 1; }
   totalBox.innerHTML = "Total: Rs " + price * qty;
